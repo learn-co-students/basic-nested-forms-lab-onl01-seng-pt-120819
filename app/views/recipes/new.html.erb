@@ -5,17 +5,12 @@
 <%= f.text_field :title %>
 
 
-<%= fields_for :ingredient do |i| %>
-<%= i.label :recipe_ingredients_attributes_0_name%>
-<%= i.text_field :recipe_ingredients_attributes_0_name%>
-<%= i.label :recipe_ingredients_attributes_0_quantity%>
-<%= i.text_field :recipe_ingredients_attributes_0_quantity%><br />
-
-
-<%= i.label :recipe_ingredients_attributes_1_name%>
-<%= i.text_field :recipe_ingredients_attributes_1_name%>
-<%= i.label :recipe_ingredients_attributes_1_quantity%>
-<%= i.text_field :recipe_ingredients_attributes_1_quantity%><br />
+<%= fields_for :ingredients do |i| %>
+<%= i.label :name%>
+<%= i.text_field :name%>
+<br />
+<%= i.label :quantity%>
+<%= i.text_field :quantity%><br />
 
 <%end%>
 <%= f.submit%>
